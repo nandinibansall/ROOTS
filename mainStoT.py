@@ -7,9 +7,9 @@ import numpy as np
 
 pt.pytesseract.tesseract_cmd="C:\\Users\\peehu\\AppData\\Local\\Programs\\Tesseract-OCR\\tesseract.exe"
 
-pages = convert_from_path("pdf2.pdf", dpi=300,poppler_path="C:\\poppler-25.07.0\\poppler-25.07.0\\Library\\bin")
+pages = convert_from_path("claimformat.pdf", dpi=300,poppler_path="C:\\poppler-25.07.0\\poppler-25.07.0\\Library\\bin")
 
-with open("output2.txt", "w", encoding="utf-8") as f:
+with open("output.txt", "w", encoding="utf-8") as f:
     for page_num, page in enumerate(pages):
         img = cv2.cvtColor(np.array(page), cv2.COLOR_RGB2BGR)
         
